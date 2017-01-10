@@ -138,7 +138,7 @@
 				<expression repeat="yes">(\d+) </expression>
 			</RegExp>
 			<!-- try get IMDBID-->
-			<RegExp input="$$20" output="&lt;chain function=&quot;PrepareGetIMDBID&quot;&gt;XBMC need some data&lt;/chain&gt;" dest="5+">
+			<RegExp input="$$20" output="&lt;chain function=&quot;PrepareGetIMDBID&quot;&gt;&lt;/chain&gt;" dest="5+">
 				<expression noclean="1"/>
 			</RegExp>
 			<!--TOP250-->
