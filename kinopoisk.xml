@@ -534,12 +534,16 @@
 			<expression/>
 		</RegExp>
 		<RegExp conditional="use_world_premier" input="none" output="$$14" dest="18">
+			<!-- if world premier is empty then fallback to production year -->
+			<RegExp conditional="use_world_premier" input="$$14" output="$$13" dest="14">
+				<expression>^$</expression>
+			</RegExp>
 			<expression/>
 		</RegExp>
-		<RegExp input="$$15" output="0" dest="15">
-			<expression>^$</expression>
-		</RegExp>
 		<RegExp input="none" output="$$15:::$$18:::$$19" dest="20">
+			<RegExp input="$$15" output="0" dest="15">
+				<expression>^$</expression>
+			</RegExp>
 			<expression/>
 		</RegExp>
 		<RegExp input="none" output="" dest="6">
