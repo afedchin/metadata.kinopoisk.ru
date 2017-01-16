@@ -180,13 +180,13 @@
 				<RegExp input="$$2" output="\1[CR]" dest="2">
 					<expression repeat="yes" noclean="1" trim="1">(.*?)(?:&lt;br /&gt;\r\n&lt;br /&gt;\r\n|&lt;br /&gt;&lt;br /&gt;|&lt;br&gt;&lt;br&gt;|&lt;=end=&gt;)</expression>
 				</RegExp>
-				<RegExp input="$$2" output="\1&amp;mdash;" dest="2">
-					<expression repeat="yes" noclean="1">(.*?)&amp;#151;</expression>
-				</RegExp>
 				<RegExp input="$$2" output="\1&amp;hellip;" dest="2">
 					<expression repeat="yes" noclean="1">(.*?)&amp;#133;</expression>
 				</RegExp>
-				<expression fixchars="1">(.*)&amp;mdash;</expression>
+				<RegExp input="$$2" output="\1&amp;mdash;" dest="2">
+					<expression repeat="yes" noclean="1">(.*?)&amp;#151;</expression>
+				</RegExp>
+				<expression fixchars="1">(.*)&amp;mdash;</expression>-->
 			</RegExp>
 			<!--STUDIO-->
 			<RegExp input="$$1" output="&lt;url cache=&quot;kinopoisk-studio-\2&quot; function=&quot;STUDIOS&quot;&gt;https://www.kinopoisk.ru\1&lt;/url&gt;" dest="5+">
